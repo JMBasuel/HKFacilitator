@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_login">
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.upang.hkfacilitator.ui.login.Login"
+        android:label="login"
+        tools:layout="@layout/login" >
+        <action
+            android:id="@+id/action_nav_login_to_home_admin"
+            app:destination="@id/home_admin" />
+        <action
+            android:id="@+id/action_nav_login_to_home_manager"
+            app:destination="@id/home_manager" />
+        <action
+            android:id="@+id/action_nav_login_to_home_faculty"
+            app:destination="@id/home_faculty" />
+        <action
+            android:id="@+id/action_nav_login_to_home_facilitator"
+            app:destination="@id/home_facilitator" />
+    </fragment>
+    <fragment
+        android:id="@+id/home_admin"
+        android:name="com.upang.hkfacilitator.ui.admin.Admin"
+        android:label="admin"
+        tools:layout="@layout/admin" >
+        <action
+            android:id="@+id/action_home_admin_to_adminFaciProfile"
+            app:destination="@id/adminFaciProfile" />
+        <action
+            android:id="@+id/action_home_admin_to_adminAddAcc"
+            app:destination="@id/adminAddAcc" />
+        <action
+            android:id="@+id/action_home_admin_to_adminFacuProfile"
+            app:destination="@id/adminFacuProfile" />
+        <action
+            android:id="@+id/action_home_admin_to_adminFacuSchedule"
+            app:destination="@id/adminFacuSchedule" />
+        <action
+            android:id="@+id/action_home_admin_to_test"
+            app:destination="@id/test" />
+    </fragment>
+    <fragment
+        android:id="@+id/home_manager"
+        android:name="com.upang.hkfacilitator.ui.manager.Manager"
+        android:label="manager"
+        tools:layout="@layout/manager" >
+        <action
+            android:id="@+id/action_home_manager_to_managerFacuProfile"
+            app:destination="@id/managerFacuProfile" />
+        <action
+            android:id="@+id/action_home_manager_to_managerFaciProfile"
+            app:destination="@id/managerFaciProfile" />
+        <action
+            android:id="@+id/action_home_manager_to_managerFacuSchedule"
+            app:destination="@id/managerFacuSchedule" />
+        <action
+            android:id="@+id/action_home_manager_to_test"
+            app:destination="@id/test" />
+    </fragment>
+    <fragment
+        android:id="@+id/home_faculty"
+        android:name="com.upang.hkfacilitator.ui.faculty.Faculty"
+        android:label="faculty"
+        tools:layout="@layout/faculty" >
+        <action
+            android:id="@+id/action_home_faculty_to_facultyRequest"
+            app:destination="@id/facultyRequest" />
+        <action
+            android:id="@+id/action_home_faculty_to_facultyProfile"
+            app:destination="@id/facultyProfile" />
+        <action
+            android:id="@+id/action_home_faculty_to_facultySchedule"
+            app:destination="@id/facultySchedule" />
+        <action
+            android:id="@+id/action_home_faculty_to_test"
+            app:destination="@id/test" />
+    </fragment>
+    <fragment
+        android:id="@+id/home_facilitator"
+        android:name="com.upang.hkfacilitator.ui.facilitator.Facilitator"
+        android:label="facilitator"
+        tools:layout="@layout/facilitator" >
+        <action
+            android:id="@+id/action_home_facilitator_to_facilitatorSchedule"
+            app:destination="@id/facilitatorSchedule" />
+        <action
+            android:id="@+id/action_home_facilitator_to_facilitatorProfile"
+            app:destination="@id/facilitatorProfile" />
+        <action
+            android:id="@+id/action_home_facilitator_to_test"
+            app:destination="@id/test" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminAddAcc"
+        android:name="com.upang.hkfacilitator.ui.admin.AdminAddAcc"
+        android:label="admin_add_acc"
+        tools:layout="@layout/admin_add_acc" />
+    <fragment
+        android:id="@+id/adminFaciProfile"
+        android:name="com.upang.hkfacilitator.ui.admin.AdminFaciProfile"
+        android:label="admin_faci_profile"
+        tools:layout="@layout/admin_faci_profile" />
+    <fragment
+        android:id="@+id/adminFacuProfile"
+        android:name="com.upang.hkfacilitator.ui.admin.AdminFacuProfile"
+        android:label="admin_facu_profile"
+        tools:layout="@layout/admin_facu_profile" >
+        <action
+            android:id="@+id/action_adminFacuProfile_to_adminFacuSchedule"
+            app:destination="@id/adminFacuSchedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/managerFaciProfile"
+        android:name="com.upang.hkfacilitator.ui.manager.ManagerFaciProfile"
+        android:label="manager_faci_profile"
+        tools:layout="@layout/manager_faci_profile" />
+    <fragment
+        android:id="@+id/managerFacuProfile"
+        android:name="com.upang.hkfacilitator.ui.manager.ManagerFacuProfile"
+        android:label="manager_facu_profile"
+        tools:layout="@layout/manager_facu_profile" >
+        <action
+            android:id="@+id/action_managerFacuProfile_to_managerFacuSchedule"
+            app:destination="@id/managerFacuSchedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/facultyProfile"
+        android:name="com.upang.hkfacilitator.ui.faculty.FacultyProfile"
+        android:label="faculty_profile"
+        tools:layout="@layout/faculty_profile" />
+    <fragment
+        android:id="@+id/facultyRequest"
+        android:name="com.upang.hkfacilitator.ui.faculty.FacultyRequest"
+        android:label="faculty_request"
+        tools:layout="@layout/faculty_request" />
+    <fragment
+        android:id="@+id/facultySchedule"
+        android:name="com.upang.hkfacilitator.ui.faculty.FacultySchedule"
+        android:label="faculty_schedule"
+        tools:layout="@layout/faculty_schedule" >
+        <action
+            android:id="@+id/action_facultySchedule_to_facultyRequest"
+            app:destination="@id/facultyRequest" />
+    </fragment>
+    <fragment
+        android:id="@+id/facilitatorProfile"
+        android:name="com.upang.hkfacilitator.ui.facilitator.FacilitatorProfile"
+        android:label="facilitator_profile"
+        tools:layout="@layout/facilitator_profile" />
+    <fragment
+        android:id="@+id/facilitatorSchedule"
+        android:name="com.upang.hkfacilitator.ui.facilitator.FacilitatorSchedule"
+        android:label="facilitator_schedule"
+        tools:layout="@layout/facilitator_schedule" />
+    <fragment
+        android:id="@+id/adminFacuSchedule"
+        android:name="com.upang.hkfacilitator.ui.admin.AdminFacuSchedule"
+        android:label="admin_facu_schedule"
+        tools:layout="@layout/admin_facu_schedule" />
+    <fragment
+        android:id="@+id/managerFacuSchedule"
+        android:name="com.upang.hkfacilitator.ui.manager.ManagerFacuSchedule"
+        android:label="manager_facu_schedule"
+        tools:layout="@layout/manager_facu_schedule" />
+    <fragment
+        android:id="@+id/test"
+        android:name="com.upang.hkfacilitator.ui.test.Test"
+        android:label="test"
+        tools:layout="@layout/test" />
+</navigation>

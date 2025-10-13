@@ -1,0 +1,171 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">HK Facilitator</string>
+    <string name="phinmaed_email">Phinmaed email</string>
+    <string name="password">Password</string>
+    <string name="login">Log In</string>
+    <string name="title">Title</string>
+    <string name="admin">Admin</string>
+    <string name="faculty">FACULTY</string>
+    <string name="manager">MANAGER</string>
+    <string name="facilitator">FACILITATOR</string>
+    <string name="menu_close">Menu close</string>
+    <string name="menu_open">Menu open</string>
+    <string name="add_account">Add account</string>
+    <string name="request_facilitator">Request Facilitator</string>
+    <string name="change_password">Change password</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="account">Account</string>
+    <string name="report_suggest"><u>Report bugs/errors or\nmake suggestions</u></string>
+    <string name="profile">Profile</string>
+    <string name="forgot_password"><u>Forgot password?</u></string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="no">No</string>
+    <string name="submit_report">Submit report</string>
+    <string name="exit">Exit</string>
+    <string name="description">Describe the bug/error or suggestion</string>
+    <string name="steps">Steps to achieve the bug/error or suggestion details (optional)</string>
+    <string name="report_bug_error_suggest">Reports / Suggestions</string>
+    <string name="add">Add</string>
+    <string name="personal_information">Personal information</string>
+    <string name="first_name">First name</string>
+    <string name="middle_name">Middle name</string>
+    <string name="last_name">Last name</string>
+    <string name="suffix">Suffix</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="account_information">Account information</string>
+    <string name="student_id">Student ID</string>
+    <string name="student_hours">Initial hours</string>
+    <string name="back">Back</string>
+    <string name="new_pin">Enter new 6-Digit PIN</string>
+    <string name="change_pin">Change PIN</string>
+    <string name="edit">Edit</string>
+    <string name="notify">Notify</string>
+    <string name="renew">Renew</string>
+    <string name="assign">Assign</string>
+    <string name="assignment">Assignment</string>
+    <string name="information">Information</string>
+    <string name="dtr">DTR</string>
+    <string name="delete">Delete</string>
+    <string name="schedule">Schedule</string>
+    <string name="requirements">Requirements</string>
+    <string name="vacant">Vacant</string>
+    <string name="requirement">Requirement</string>
+    <string name="image">Image</string>
+    <string name="remove">Remove</string>
+    <string name="permanent_assign">Permanent Assignment</string>
+    <string name="filter">Filter with facilitator vacant information</string>
+    <string name="not_require_pin">Do not require PIN during this login</string>
+    <string name="appeal">Appeal</string>
+    <string name="ok">OK</string>
+    <string name="evaluation">Evaluation</string>
+    <string name="proof">Proof</string>
+    <string name="date_picker">Date picker</string>
+    <string name="last_renew">Renewed: No data</string>
+    <string name="permanent_schedule">Permanent schedule</string>
+    <string name="extra_schedule">Extra schedule</string>
+    <string name="joined_schedule">Joined schedule</string>
+    <string name="no_permanent">No permanent schedule assigned</string>
+    <string name="faci">Facilitator</string>
+    <string name="facu">Faculty</string>
+    <string name="mana">Manager</string>
+    <string name="finish">Finish</string>
+    <string name="facilitators">Facilitators</string>
+    <string name="schedule_details">Schedule details</string>
+    <string name="more_details">More details</string>
+    <string name="room">Room</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="permanent">Permanent</string>
+    <string name="extra">Extra</string>
+    <string name="date">Date</string>
+    <string name="start_time">Start time</string>
+    <string name="end_time">End time</string>
+    <string name="number_of_facilitators">Number of facilitators needed</string>
+    <string name="request">Request</string>
+    <string name="time_picker">Time picker</string>
+    <string name="active_schedule">Active schedule</string>
+    <string name="select_all">Select all</string>
+    <string name="submit">Submit</string>
+    <string name="will_be_marked">Selected facilitator will be marked PRESENT, otherwise ABSENT</string>
+    <string name="invalid_time_range">Invalid time range</string>
+    <string name="restrict">Restrict facilitators to be of higher level of different program</string>
+    <string name="subject">Subject</string>
+    <string name="completed_schedule">Completed schedule</string>
+    <string name="time_in">TIME-IN</string>
+    <string name="time_out">TIME-OUT</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_vacant">Add vacant</string>
+    <string name="comment">Comment</string>
+    <string name="courses">Courses</string>
+    <string name="code">Code</string>
+    <string name="add_course">Add course</string>
+    <string name="appeal_notice">Appeal notice</string>
+    <string name="notifications">Notifications</string>
+    <string name="notification_close">Notification Close</string>
+    <string name="notice">!</string>
+    <string name="join">JOIN</string>
+    <string name="subjects">Subjects:</string>
+    <string name="location">Location:</string>
+    <string name="active">ACTIVE</string>
+    <string name="time_help">Note: You can time in and time out for facilitators who can/could not do it themselves. In addition, you can edit time-ins and/or time-outs that you think are incorrect.</string>
+    <string name="edit_course">Edit course</string>
+    <string name="select_new_course">Select new course</string>
+    <string name="excel">Excel</string>
+    <string name="extend">Extend</string>
+    <string name="note_unselect">NOTE: Unselect ABSENT facilitators</string>
+    <string name="assign_facilitators">Assign Facilitators</string>
+    <string name="expired">EXPIRED</string>
+    <string name="approve">Approve</string>
+    <string name="decline">Decline</string>
+    <string name="extension_notice">Extension notice</string>
+    <string name="extension">EXTENSION</string>
+    <string name="delete_notifications">Delete notifications</string>
+    <string name="export">Export</string>
+    <string name="select_your_school">SELECT YOUR SCHOOL</string>
+    <string name="school">School</string>
+    <string name="new_input">New</string>
+    <string name="reset_password">To reset your password, logout then click \'Forgot password?\'.</string>
+    <string name="change">Change</string>
+    <string name="send_reset">Send reset link</string>
+    <string name="uppercase">Must have at least one uppercase letter (A-Z)</string>
+    <string name="lowercase">Must have at least one lowercase letter (a-z)</string>
+    <string name="digit" tools:ignore="TypographyDashes">Must have at least one number (0-9)</string>
+    <string name="length">Minimum of 8 characters</string>
+    <string name="symbol"><![CDATA[Must have at least one symbol (?!@#$%&* …)]]></string>
+    <string name="forgot_password_title">Forgot password?</string>
+    <string name="enable_notifications"><u>Click here to enable data sync\nand/or real-time notifications</u></string>
+    <string name="enable_notifications_admin"><u>Click here to enable real-time notifications</u></string>
+    <string name="check_now">Check it now</string>
+    <string name="suspend">Suspend</string>
+    <string name="suspended">Suspended</string>
+    <string name="test">Test</string>
+    <string-array name="year_tertiary">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="year_secondary">
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="scholarship">
+        <item>HK25</item>
+        <item>HK50</item>
+        <item>HK75</item>
+        <item>HK100</item>
+    </string-array>
+    <string-array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+    <string-array name="course_type">
+        <item>Tertiary</item>
+        <item>Secondary</item>
+    </string-array>
+</resources>

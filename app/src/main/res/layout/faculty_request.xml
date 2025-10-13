@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.faculty.FacultyRequest">
+
+    <RelativeLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/green_dark"
+        app:layout_constraintBottom_toTopOf="@+id/form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/image_button"
+            android:contentDescription="@string/back"
+            android:padding="5dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/back"
+            android:text="@string/app_name"
+            android:textColor="@color/yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/form"
+        style="@style/ScrollBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Request"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/schedule_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/schedule_details"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginVertical="3dp"
+                    android:autofillHints=""
+                    android:background="@drawable/input_bg"
+                    android:hint="@string/title"
+                    android:inputType="textCapWords"
+                    android:maxLength="30"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_dark"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/room"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginVertical="3dp"
+                    android:autofillHints=""
+                    android:background="@drawable/input_bg"
+                    android:hint="@string/room"
+                    android:inputType="textCapCharacters"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_dark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/schedule_details">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/subject"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginVertical="3dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/course"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/spinner"
+                        android:popupBackground="@drawable/spinner_view"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/year"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner"
+                        android:entries="@array/year_tertiary"
+                        android:popupBackground="@drawable/spinner_view"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginVertical="3dp"
+                    android:background="@drawable/input_bg"
+                    android:button="@null"
+                    android:drawableStart="@drawable/checkbox"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:paddingHorizontal="5dp"
+                    android:text="@string/restrict"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:autofillHints=""
+                    android:background="@drawable/input_bg"
+                    android:hint="@string/more_details"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLength="200"
+                    android:padding="12dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_dark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/date_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subject">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/date_and_time"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:id="@+id/type"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginVertical="3dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/permanent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/input_bg_left"
+                        android:button="@null"
+                        android:drawableStart="@drawable/radio"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="50dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/permanent"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/extra"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/input_bg_right"
+                        android:button="@null"
+                        android:drawableStart="@drawable/radio"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="50dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/extra"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/date_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginVertical="3dp"
+                        android:layout_toStartOf="@+id/btn_DatePicker"
+                        android:autofillHints=""
+                        android:background="@drawable/input_bg"
+                        android:hint="@string/date"
+                        android:inputType="date"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_dark"
+                        android:textSize="15sp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_DatePicker"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/input_bg"
+                        android:contentDescription="@string/date_picker"
+                        android:src="@drawable/calendar" />
+
+                </RelativeLayout>
+
+                <Spinner
+                    android:id="@+id/day_Picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginVertical="3dp"
+                    android:background="@drawable/spinner"
+                    android:entries="@array/days"
+                    android:popupBackground="@drawable/spinner_view"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/start"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginVertical="3dp"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/input_bg"
+                        android:hint="@string/start_time"
+                        android:inputType="time"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_dark"
+                        android:textSize="15sp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_StartPicker"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="3dp"
+                        android:background="@drawable/input_bg"
+                        android:contentDescription="@string/time_picker"
+                        android:src="@drawable/clock" />
+
+                    <EditText
+                        android:id="@+id/end"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginVertical="3dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/input_bg"
+                        android:hint="@string/end_time"
+                        android:inputType="time"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_dark"
+                        android:textSize="15sp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_EndPicker"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/input_bg"
+                        android:contentDescription="@string/time_picker"
+                        android:src="@drawable/clock" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/facilitator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_time">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/facilitators"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/need"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginVertical="3dp"
+                    android:autofillHints=""
+                    android:background="@drawable/input_bg"
+                    android:hint="@string/number_of_facilitators"
+                    android:inputType="number"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_dark"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/facilitators"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/check_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:focusable="false"
+                        android:layoutDirection="rtl"
+                        android:text="@string/select_all"
+                        android:textColor="@color/green_dark"
+                        android:textSize="13sp"
+                        app:buttonTint="@color/green_dark" />
+
+                    <TextView
+                        android:id="@+id/info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:paddingHorizontal="5dp"
+                        android:text="@string/note_unselect"
+                        android:textColor="@color/green_dark"
+                        android:textSize="11sp"
+                        android:textStyle="italic" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_facilitators"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="3dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/scroller"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.26"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/facilitator" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/button_tint_green"
+        android:text="@string/request"
+        android:textColor="#E1E1E1"
+        android:textSize="15sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/form"
+        app:layout_constraintWidth_percent="0.95" />
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/progress_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
