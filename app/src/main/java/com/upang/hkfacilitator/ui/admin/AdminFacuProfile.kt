@@ -49,6 +49,7 @@ class AdminFacuProfile : Fragment(), ConnectionStateListener,
     private lateinit var facuQuery: Query
     private lateinit var user: User
     private var isDoneSetup = false
+    private var unfinished = false
     private var isPaused = false
     private val callbackFalse = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {}
@@ -303,7 +304,7 @@ class AdminFacuProfile : Fragment(), ConnectionStateListener,
     }
 
     private fun terminate() {
-        var unfinished = false
+        unfinished = false
         val updates = hashMapOf<String, Any?>(
             "/Accounts/${emailToKey(user.email!!)}" to null,
             "/Data/Faculty/${user.email!!.hashSHA256()}" to null)

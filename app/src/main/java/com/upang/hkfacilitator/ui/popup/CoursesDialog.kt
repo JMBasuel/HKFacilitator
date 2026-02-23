@@ -153,7 +153,7 @@ class CoursesDialog : DialogFragment(), CourseClickListener {
 
     private fun checkCode(code: String): Boolean {
         if (code.isNotEmpty()) {
-            val regex = Regex("^[^0-9.]*\$")
+            val regex = Regex("^[^0-9.]*$")
             if (!regex.matches(code)) {
                 binding.code.error = "Must not contain " +
                         "numbers and/or a dot"
@@ -175,7 +175,7 @@ class CoursesDialog : DialogFragment(), CourseClickListener {
 
     private fun checkTitle(title: String): Boolean {
         if (title.isNotEmpty()) {
-            val regex = Regex("^[^0-9.]*\$")
+            val regex = Regex("^[^0-9.]*$")
             if (!regex.matches(title)) {
                 binding.title.error = "Must not contain " +
                         "numbers and/or a dot"

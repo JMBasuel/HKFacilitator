@@ -85,7 +85,7 @@ class FacilitatorDialog(
     override fun onTimeClick(user: User, isTimeIn: Boolean) {}
 
     override fun onCheckClick() {
-        binding.btnAssign.isEnabled = adapter.getViewHolders().count { it.binding.checkBox.isChecked } in 1..need
+        binding.btnAssign.isEnabled = adapter.getViewHolders().count { it.binding.checkBox.isChecked } in 1 downTo need
     }
 
     private fun assign() {

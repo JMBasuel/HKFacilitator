@@ -47,6 +47,7 @@ class AssignDialog(
     private var selectSched: Schedule? = null
     private lateinit var dialog: AlertDialog
     private lateinit var watchQuery: Query
+    private var aborted = ""
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         binding = DialogAssignBinding.inflate(layoutInflater)
@@ -201,7 +202,7 @@ class AssignDialog(
 
     private fun assignSchedule(isAssign: Boolean) {
         setupProgress(if (isAssign) "Assigning schedule" else "Removing assignment")
-        var aborted = ""
+        aborted = ""
         dbRef.child("/Permanents/${selectSched!!.id}").runTransaction(
             object : Transaction.Handler {
                 override fun doTransaction(currentData: MutableData): Transaction.Result {
